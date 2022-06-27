@@ -1,5 +1,5 @@
 import "../styles/search-bar.css";
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { MyProvider } from "../context";
 
 function SearchBar() {

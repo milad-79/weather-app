@@ -12,6 +12,7 @@ type ContextProviderProps = {
 
 type UserContextType = {
     data: ApiValue | null,
+    search: ApiValue,
     setData: React.Dispatch<React.SetStateAction<ApiValue>>,
     setSearch: React.Dispatch<React.SetStateAction<string | null>>
 }
@@ -43,6 +44,7 @@ export const MyContext = ({children}:ContextProviderProps)=>{
 
         <MyProvider.Provider value={{
             data,
+            search,
             setData,
             setSearch
         }}>

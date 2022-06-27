@@ -13,6 +13,7 @@
     background-size: cover;
     border-radius: 12px;
     animation: Show .7s;
+    overflow: hidden;
 }
 
 .show_condition_container header{

@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { MyProvider } from '../context';
 import '../styles/show-condition.css';
+
 
 function ShowConditin() {
 
@@ -24,6 +25,41 @@ function ShowConditin() {
     } else if (data.getDay()  === 6) {
     day = "Saturday";
     }
+
+
+    const mainElement: Element | null = document.querySelector('.show_condition_container .main');
+    const headerElement: Element | null = document.querySelector('.show_condition_container header');
+
+    useEffect(()=>{
+        headerElement?.animate([
+            {
+                transform: 'translateY(-100%)',
+                opacity: 0
+            },
+            {
+    
+                transform: 'translateY(0%)',
+                opacity: 1
+    
+            }
+        ],700)
+
+
+        mainElement?.animate([
+            {
+    
+                opacity: 0
+    
+            },
+            {
+    
+                opacity: 1
+    
+            }
+        ],700)
+
+        
+    },[context?.search])
 
     return ( 
         <div className="show_condition_container">
