@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
+import SearchBar from './components/Search.Bar';
+import ShowConditin from './components/Show.Condition';
+import { MyProvider } from './context';
 
 function App() {
+
+  const context = useContext(MyProvider); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+          <SearchBar/>
+
+          {
+            context?.data ?
+
+            <ShowConditin/>
+
+            :
+
+            null
+
+          }
+
     </div>
   );
 }

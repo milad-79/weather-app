@@ -1,0 +1,96 @@
+.show_condition_container{
+    position: absolute;
+    width: 500px;
+    height: 301px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    background-image: url('../../public/images/back.jpg');
+    background-size: cover;
+    border-radius: 12px;
+    animation: Show .7s;
+}
+
+.show_condition_container header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+
+.show_condition_container header h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.show_condition_container span{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 1px;
+}
+
+
+.show_condition_container .main{
+    display: flex;
+    margin-top: 40px;
+}
+
+
+.show_condition_container .left{
+    text-align: center;
+    flex: 1;
+    justify-content: right;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.show_condition_container .left img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.show_condition_container .right{
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.show_condition_container .right h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.show_condition_container .right h4{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.show_condition_container .right span{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+@keyframes Show{
+    0%{
+        top: 50%;
+        left: 50%;
+        transform: translate(-100%, -50%);
+        opacity: 0;
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
